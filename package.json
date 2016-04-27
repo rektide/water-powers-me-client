@@ -1,15 +1,15 @@
 {
-  "name": "hoodie-app-tracker",
-  "description": "Default Hoodie app",
-  "author": "The Hoodie Community and other contributors | http://hood.ie/",
+  "name": "water-powers-me",
+  "description": "Water/Tea drinking Quantified Self",
+  "author": "rektide de la faye",
   "bugs": {
-    "url": "https://github.com/hoodiehq/hoodie-app-tracker/issues"
+    "url": "https://github.com/rektide/water-powers-me/issues"
   },
   "engines": {
     "node": ">=4",
     "npm": ">=3"
   },
-  "homepage": "https://github.com/hoodiehq/hoodie-app-tracker",
+  "homepage": "https://github.com/rektide/water-powers-me",
   "keywords": [
     "hoodie",
     "app"
@@ -17,7 +17,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hoodiehq/hoodie-app-tracker.git"
+    "url": "https://archive.voodoowarez.com/water-powers-me"
   },
   "scripts": {
     "pretest": "standard test/**/*.js",
@@ -25,11 +25,12 @@
     "start": "hoodie",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "build": "browserify -t reactify src/app.js -o public/assets/js/app.js -d",
-    "dev": "watchify -t reactify src/app.js -o public/assets/js/app.js -d -v"
+    "dev": "watchify -t reactify src/app.js -o public/assets/js/app.js -d -v",
+    "files": "find README.md package.json Dockerfile src public test -type f"
   },
   "dependencies": {
-    "hoodie": "git://github.com/hoodiehq/hoodie#tent",
-    "hoodie-client": "^3.4.0",
+    "hoodie": "^12.0.0",
+    "hoodie-client": "^3.4.1",
     "material-design-lite": "^1.1.3",
     "react": "^15.0.0-rc.2",
     "react-dom": "^15.0.0-rc.2",

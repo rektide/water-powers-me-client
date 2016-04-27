@@ -19,19 +19,32 @@ let WaterInput= React.createClass({
 					Record a Drink
 				</CardTitle>
 				<CardText style={{display: "flex"}}>
-					<div style={{flex: "0 1 auto", textAlign: "center"}}>
-						<span style={{fontSizeAdjust: 0.7, fontWeight: "bolder"}}>
-							oz</span><br/>
-						{this.state.oz}
+					<div style={{flex: "0 1 auto", textAlign: "center", marginTop: "-1.2rem"}}>
+						<span style={{fontSize: "0.8rem", fontWeight: "bolder"}}>
+							oz
+						</span><br/>
+						<span style={{fontSize: "1.6rem", fontWeight: "bolder"}}>
+							{this.state.oz}
+						</span>
 					</div>
-					<Slider style={{flex: "0 1 auto"}} min={0} max={32} value={this.state.oz} onChange={this.slide} />
-					<Button style={{flex: "0 1 auto"}} raised ripple onClick={this.submit}>Drink</Button>
+					<div style={{flex: "1 1 auto"}}>
+						<Slider min={0} max={32} value={this.state.oz} onChange={this.slide} />
+					</div>
+					<div style={{flex: "0 1 auto"}}>
+						<Button style={{flex: "0 1 auto"}} raised ripple onClick={this.submit}>Drink</Button>
+					</div>
 				</CardText>
-				<CardActions border style={{display: "flex"}}>
-					<Button raised ripple onClick={this.setter(6)}>Cup (6oz)</Button>
-					<Button raised ripple onClick={this.setter(9)}>Glass (9oz)</Button>
-					<Button raised ripple onClick={this.setter(12)}>Tall (12oz)</Button>
-				</CardActions>
+				<CardText border style={{display: "flex", justifyContent: "flex-end"}}>
+					<div style={{flex: "0 1 auto"}}>
+						<Button raised ripple onClick={this.setter(6)}>Cup (6oz)</Button>
+					</div>
+					<div style={{flex: "0 1 auto"}}>
+						<Button raised ripple onClick={this.setter(9)}>Glass (9oz)</Button>
+					</div>
+					<div style={{flex: "0 1 auto"}}>
+						<Button raised ripple onClick={this.setter(12)}>Tall (12oz)</Button>
+					</div>
+				</CardText>
 
 			</Card>)
 	},

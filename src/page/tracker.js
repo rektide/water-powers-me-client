@@ -22,15 +22,13 @@ let TrackerPage= React.createClass({
 						<Navigation>
 							<UserNav hoodie={this.state.hoodie} />
 						</Navigation>
-						<Drawer title="WaterPowers.me">
-							<a href="#">⌂</a>
-						</Drawer>
-						<Content>
-							<div style={{padding: "50px 0px 0px 0px"}}>
-								<WaterInput />
-							</div>
-						</Content>
 					</Header>
+					<Drawer title="WaterPowers.me">
+						<a href="#">⌂</a>
+					</Drawer>
+					<Content>
+							<WaterInput />
+					</Content>
 				</Layout>
 			</div>)
 	}

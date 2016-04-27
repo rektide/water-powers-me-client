@@ -13,10 +13,10 @@ let WaterInput= React.createClass({
 		return { oz: 8 }
 	},
 	render: function(props){
-		return (<Card>
+		return (<Card shadow={0} style={{width: "540px", margin: "10px 30px"}} >
 				<CardTitle style={{color: "#33a"}}>Record a Drink</CardTitle>
 				<div style={{display:"flex"}}>
-					<Slider style={{"flex-grow": 3}} min={0} max={32} value={this.state.oz} onChange={this.slide} />
+					<Slider style={{"flexGrow": 3}} min={0} max={32} value={this.state.oz} onChange={this.slide} />
 					<CardText>{this.state.oz}</CardText>
 					<Button raised ripple onClick={this.submit}>Drink</Button>
 				</div>

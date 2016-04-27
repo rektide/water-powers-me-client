@@ -1,3 +1,7 @@
 .mdl-layout__header {
 	background-color: royalblue;
 }
+
+.mdl-layout__content {
+	background-color: rgb(220,226,245);
+}

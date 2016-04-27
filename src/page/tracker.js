@@ -27,7 +27,7 @@ let TrackerPage= React.createClass({
 						<a href="#">⌂</a>
 					</Drawer>
 					<Content>
-							<WaterInput />
+							<WaterInput hoodie={this.state.hoodie} />
 					</Content>
 				</Layout>
 			</div>)

@@ -10,8 +10,11 @@ let
 
 let WaterInput= React.createClass({
 	displayName: "WaterInput",
+	propTypes: {
+		hoodie: React.PropTypes.object.isRequired
+	},
 	getInitialState: function(){
-		return { oz: 8 }
+		return { oz: 9 }
 	},
 	render: function(props){
 		return (<Card shadow={0} style={{width: "540px", margin: "10px 30px"}} >
@@ -63,7 +66,11 @@ let WaterInput= React.createClass({
 			oz: n
 		})
 	},
-	submit: function(){
+	submit: function(val){
+		this.props.hoodie.store.add({
+			oz: this.state.oz,
+			t: new Date()
+		});
 	}
 })
 

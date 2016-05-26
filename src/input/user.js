@@ -1,13 +1,15 @@
+"use strict"
+
 let
   React= require("react"),
+  Button= require("react-mdl/lib/Button").default,
+  Textfield= require("react-mdl/lib/Textfield").default,
   card= require("react-mdl/lib/Card"),
   Card= card.Card,
   CardActions= card.CardActions,
   CardTitle= card.CardTitle,
   CardText= card.CardText,
-  Slider= require("react-mdl/lib/Slider").default,
-  Button= require("react-mdl/lib/Button").default
-  Button= require("react-mdl/lib/Textfield").default
+  Slider= require("react-mdl/lib/Slider").default
 
 let UserInput= React.createClass({
 	displayName: "UserInput",
@@ -15,7 +17,7 @@ let UserInput= React.createClass({
 		hoodie: React.PropTypes.object.isRequired
 	},
 	getInitialState: function(){
-		return {username: "", password; ""}
+		return {username: "", password: ""}
 	},
 	render: function(props){
 		return (<Card shadow={0} style={{width: "540px", margin: "10px 30px"}} >
@@ -29,7 +31,6 @@ let UserInput= React.createClass({
 				<CardActions>
 					<Button ripple onClick={this.signIn}>Go</Button>
 				</CardActions>
-
 			</Card>)
 	},
 	setUsername: function(e){
@@ -56,4 +57,4 @@ let UserInput= React.createClass({
 	}
 })
 
-module.exports= WaterInput
+module.exports= UserInput

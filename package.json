@@ -30,6 +30,7 @@
     "files": "find README.md package.json Dockerfile src public test -type f"
   },
   "dependencies": {
+    "history": "^2.1.1",
     "hoodie": "^12.0.0",
     "hoodie-client": "^3.4.1",
     "material-design-lite": "^1.1.3",

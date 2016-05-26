@@ -1,12 +1,17 @@
 let
-  HoodieClient= require("hoodie-client")
+  HoodieClient= require("hoodie-client"),
+  History = require("history")
 
 let
-  hoodie
+  hoodie,
+  history
 
 module.exports= function(){
 	if(!hoodie){
 		hoodie= new HoodieClient({})
 	}
-	return { hoodie }
+	if(!history){
+		history = History.createHistory()
+	}
+	return { hoodie, history, showLoginCard: false }
 }
